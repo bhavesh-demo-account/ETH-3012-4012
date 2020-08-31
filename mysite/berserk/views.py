@@ -30,8 +30,12 @@ def login_user(request):
     context = {}
     return render(request,'berserk/login.html', context)
 
+# def home(request):
+#     return render(request,'berserk/home.html')
+
 def home(request):
-    return render(request,'berserk/home.html')
+    return render(request, 'berserk/home.html')
+
 
 def logoutUser(request):
     logout(request)

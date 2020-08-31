@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {% load static %}
 <html lang="en">
 
@@ -9,13 +10,13 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Vibe - Feel the rhythm</title>
+    <title>Vibe - Feel the Rhythm</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="static/img/core-img/favicon.ico">
+    <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" type="text/html" href="static/css/style.css"  />
+    <link rel="stylesheet" href="{% static 'berserk/css/style.css' %}">
 
 </head>
 
@@ -40,7 +41,7 @@
                     <nav class="classy-navbar justify-content-between" id="VibeNav">
 
                         <!-- Nav brand -->
-                        <a href="index.html" class="nav-brand"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+                        <a href="index.html" class="nav-brand"><img src="{% static 'berserk/img/core-img/logo.png' %}" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -65,14 +66,14 @@
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
 
-                                <!-- Login/Register -->
-                                <div class="login-register align-items-center">
+                                <!-- Login/Register-->
+                                <div class="login-register d-flex align-items-center">
                                     <!-- Login/Register -->
-                                    <div class="login-btn mr-50">
+                                    <div class="login-register-btn mr-50">
                                         <a href="login.html" id="loginBtn">Login</a>
                                     </div>
-                                    <div class="register-btn mr-50">
-                                        <a href="registration.html" id="registerBtn">Register</a>
+                                    <div class="d-flex justify-content-center links">
+                                          Don't have an account? <a href="/register/" class="ml-2">Sign Up</a>
                                     </div>
                                 </div>
                             </div>
@@ -86,330 +87,54 @@
     </header>
     <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Hero Area Start ##### -->
-    <section class="hero-area">
-        <div class="hero-slides owl-carousel">
-            <!-- Single Hero Slide -->
-            <div class="single-hero-slide d-flex align-items-center justify-content-center">
-                <!-- Slide Img -->
-                <div class="slide-img bg-img" style="background-image: url(img/bg-img/bg-1.jpg);"></div>
-                <!-- Slide Content -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="hero-slides-content text-center">
-                                <h6 data-animation="fadeInUp" data-delay="100ms">Latest album</h6>
-                                <h2 data-animation="fadeInUp" data-delay="300ms">Feel the Rhythm <span>Feel the Rhythm</span></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Hero Slide -->
-            <div class="single-hero-slide d-flex align-items-center justify-content-center">
-                <!-- Slide Img -->
-                <div class="slide-img bg-img" style="background-image: url(img/bg-img/bg-2.jpg);"></div>
-                <!-- Slide Content -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="hero-slides-content text-center">
-                                <h6 data-animation="fadeInUp" data-delay="100ms">Latest album</h6>
-                                <h2 data-animation="fadeInUp" data-delay="300ms">Vibe<span>Vibe</span></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- ##### Breadcumb Area Start ##### -->
+    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url({% static  'berserk/img/bg-img/breadcumb3.jpg' %});">
+        <div class="bradcumbContent">
+            <p>See what’s new</p>
+            <h2>Login</h2>
         </div>
     </section>
-    <!-- ##### Hero Area End ##### -->
+    <!-- ##### Breadcumb Area End ##### -->
 
-    <!-- ##### Latest Albums Area Start ##### -->
-    <section class="latest-albums-area section-padding-100">
+    <!-- ##### Login Area Start ##### -->
+    <section class="login-area section-padding-100">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading style-2">
-                        <p>See what’s new</p>
-                        <h2>Latest Albums</h2>
-                    </div>
-                </div>
-            </div>
             <div class="row justify-content-center">
-                <div class="col-12 col-lg-9">
-                    <div class="ablums-text text-center mb-70">
-                        <p>"I am a romantic, but I do put up a barrier around myself, so it is hard for people to get in and to know the real me."</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <div class="albums-slideshow owl-carousel">
-                        <!-- Single Album -->
-                        <div class="single-album">
-                            <img src="img/bg-img/a1.jpg" alt="">
-                            <div class="album-info">
-                                <a href="#">
-                                    <h5>Taylor Swift</h5>
-                                </a>
-                                <p>Folklore</p>
-                            </div>
-                        </div>
-
-                        <!-- Single Album -->
-                        <div class="single-album">
-                            <img src="img/bg-img/a2.jpg" alt="">
-                            <div class="album-info">
-                                <a href="#">
-                                    <h5>The Weeknd</h5>
-                                </a>
-                                <p>After Hours</p>
-                            </div>
-                        </div>
-
-                        <!-- Single Album -->
-                        <div class="single-album">
-                            <img src="{% static 'img/bg-img/a3.jpg' %}" alt="">
-                            <div class="album-info">
-                                <a href="#">
-                                    <h5>The Pink Floyd</h5>
-                                </a>
-                                <p>Wish You Were Here</p>
-                            </div>
-                        </div>
-
-                        <!-- Single Album -->
-                        <div class="single-album">
-                            <img src="img/bg-img/a4.jpg" alt="">
-                            <div class="album-info">
-                                <a href="#">
-                                    <h5>Martin Garrix</h5>
-                                </a>
-                                <p>Higher Ground</p>
-                            </div>
-                        </div>
-
-                        <!-- Single Album -->
-                        <div class="single-album">
-                            <img src="img/bg-img/a5.jpg" alt="">
-                            <div class="album-info">
-                                <a href="#">
-                                    <h5>Khalid</h5>
-                                </a>
-                                <p>American Teen</p>
-                            </div>
-                        </div>
-
-                        <!-- Single Album -->
-                        <div class="single-album">
-                            <img src="img/bg-img/a6.jpg" alt="">
-                            <div class="album-info">
-                                <a href="#">
-                                    <h5>Post Malone</h5>
-                                </a>
-                                <p>Holywood's Bleeding</p>
-                            </div>
-                        </div>
-
-                        <!-- Single Album -->
-                        <div class="single-album">
-                            <img src="img/bg-img/a7.jpg" alt="">
-                            <div class="album-info">
-                                <a href="#">
-                                    <h5>Eminem</h5>
-                                </a>
-                                <p>The Marshall Mathers LP 2</p>
-                            </div>
+                <div class="col-12 col-lg-8">
+                    <div class="login-content">
+                        <h3>Welcome Back</h3>
+                        <!-- Login Form -->
+                        <div class="login-form">
+                            <form action="#" method="post">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter E-mail">
+                                    <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn oneMusic-btn mt-30">Login</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ##### Latest Albums Area End ##### -->
-
-    <!-- ##### Buy Now Area Start ##### -->
-    <section class="oneMusic-buy-now-area has-fluid bg-gray section-padding-100">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading style-2">
-                        <h2>You might also like....</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-
-                <!-- Single Album Area -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
-                        <div class="album-thumb">
-                            <img src="img/bg-img/b1.jpg" alt="">
-                        </div>
-                        <div class="album-info">
-                            <a href="#">
-                                <h5>Perfect</h5>
-                            </a>
-                            <p>Ed Sheeran</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Album Area -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="single-album-area wow fadeInUp" data-wow-delay="200ms">
-                        <div class="album-thumb">
-                            <img src="img/bg-img/b2.jpg" alt="">
-                        </div>
-                        <div class="album-info">
-                            <a href="#">
-                                <h5>100 Words</h5>
-                            </a>
-                            <p>Prateek Kuhad</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Album Area -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="single-album-area wow fadeInUp" data-wow-delay="300ms">
-                        <div class="album-thumb">
-                            <img src="img/bg-img/b3.jpg" alt="">
-                        </div>
-                        <div class="album-info">
-                            <a href="#">
-                                <h5>Udd Gaye</h5>
-                            </a>
-                            <p>Ritviz</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Album Area -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="single-album-area wow fadeInUp" data-wow-delay="400ms">
-                        <div class="album-thumb">
-                            <img src="img/bg-img/b4.jpg" alt="">
-                        </div>
-                        <div class="album-info">
-                            <a href="#">
-                                <h5>Love of My Life</h5>
-                            </a>
-                            <p>Queen</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Album Area -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="single-album-area wow fadeInUp" data-wow-delay="500ms">
-                        <div class="album-thumb">
-                            <img src="img/bg-img/b5.jpg" alt="">
-                        </div>
-                        <div class="album-info">
-                            <a href="#">
-                                <h5>Monica Lewinsky</h5>
-                            </a>
-                            <p>Saint JHN</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Album Area -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="single-album-area wow fadeInUp" data-wow-delay="600ms">
-                        <div class="album-thumb">
-                            <img src="img/bg-img/b6.jpg" alt="">
-                        </div>
-                        <div class="album-info">
-                            <a href="#">
-                                <h5>Memories</h5>
-                            </a>
-                            <p>Maroon 5</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Album Area -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
-                        <div class="album-thumb">
-                            <img src="img/bg-img/b7.jpg" alt="">
-                        </div>
-                        <div class="album-info">
-                            <a href="#">
-                                <h5>New Rules</h5>
-                            </a>
-                            <p>Dua Lipa</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Album Area -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="single-album-area wow fadeInUp" data-wow-delay="200ms">
-                        <div class="album-thumb">
-                            <img src="img/bg-img/b8.jpg" alt="">
-                        </div>
-                        <div class="album-info">
-                            <a href="#">
-                                <h5>No Lie</h5>
-                            </a>
-                            <p>Sean Paul ft. Dua Lipa</p>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        </div>
-
-    </section>
-    <!-- ##### Buy Now Area End ##### -->
-
-    <!-- ##### Featured Artist Area Start ##### -->
-    <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-fixed" style="background-image: url(img/bg-img/bg-4.jpg);">
-        <div class="container">
-            <div class="row align-items-end">
-                <div class="col-12 col-md-5 col-lg-4">
-                    <div class="featured-artist-thumb">
-                        <img src="img/bg-img/fa.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-12 col-md-7 col-lg-8">
-                    <div class="featured-artist-content">
-                        <!-- Section Heading -->
-                        <div class="section-heading white text-left mb-30">
-                            <h2>See what’s new</h2>
-                        </div>
-                        <p>“If you’re white and you’re wrong, then you’re wrong; if you’re black and you’re wrong, you’re wrong. People are people. Black, blue, pink, green – God make no rules about color; only society make rules where my people suffer, and that why we must have redemption and redemption now.” -Bob Marley</p>
-                        <div class="song-play-area">
-                            <div class="song-name">
-                                <p>01. Main Hit Song</p>
-                            </div>
-                            <audio preload="auto" controls>
-                                <source src="audio/The Middle.mp3">
-                            </audio>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Featured Artist Area End ##### -->
+    <!-- ##### Login Area End ##### -->
 
     <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <script src="{% static 'berserk/js/jquery/jquery-2.2.4.min.js' %}"></script>
     <!-- Popper js -->
-    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <script src="{% static 'berserk/js/bootstrap/popper.min.js' %}"></script>
     <!-- Bootstrap js -->
-    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'berserk/js/bootstrap/bootstrap.min.js' %}"></script>
     <!-- All Plugins js -->
-    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <script src="{% static 'berserk/js/plugins/plugins.js' %}"></script>
     <!-- Active js -->
-    <script src="{% static 'js/active.js' %}"></script>
+    <script src="{% static 'berserk/js/active.js' %}"></script>
 </body>
 </html>
